@@ -7,7 +7,7 @@ import java.util.Vector;
 public class PackageExplorer {
 
 	public PackageExplorer() {
-		getClassList("org.mql.java.reflection");
+		getClassList("org.mql.java.models");
 		
 	}
 	
