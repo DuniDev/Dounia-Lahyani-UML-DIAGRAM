@@ -1,13 +1,15 @@
 package org.mql.java.reflection;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.Vector;
 
 public class PackageExplorer {
-
+	
 	public PackageExplorer() {
 		getClassList("org.mql.java.models");
+		
 		
 	}
 	
@@ -38,6 +40,7 @@ public class PackageExplorer {
 					
 				}
 				v.add( s +" "+name);
+				ClassParser cp = new ClassParser(packageName+"."+name);
 			}
 		}
 		String t[] = new String[v.size()];
@@ -49,6 +52,7 @@ public class PackageExplorer {
 		}
 		return t;
 	}
+	
 	
 	
 	
